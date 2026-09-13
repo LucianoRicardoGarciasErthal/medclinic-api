@@ -4,12 +4,13 @@
   "description": "API de autenticacao e autorizacao para clinica medica",
   "main": "dist/server.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js",
-    "migration:generate": "typeorm-ts-node-commonjs migration:generate -d src/config/database.ts",
-    "migration:run": "typeorm-ts-node-commonjs migration:run -d src/config/database.ts",
-    "migration:revert": "typeorm-ts-node-commonjs migration:revert -d src/config/database.ts"
+     "dev": "tsx watch src/server.ts",
+  "build": "tsc",
+  "start": "node dist/server.js",
+  "typeorm": "typeorm-ts-node-commonjs -d src/config/database.ts",
+  "migration:run": "npm run typeorm -- migration:run",
+  "migration:revert": "npm run typeorm -- migration:revert",
+  "migration:show": "npm run typeorm -- migration:show"
   },
   "keywords": [
     "node",
