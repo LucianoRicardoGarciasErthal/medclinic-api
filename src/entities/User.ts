@@ -15,18 +15,18 @@ export class User {
   @PrimaryGeneratedColumn('uuid')
   id!: string;
 
-  @Column({ length: 100 })
+  @Column({ type: 'varchar', length: 100 })
   nome!: string;
 
-  @Column({ length: 150, unique: true })
+  @Column({ type: 'varchar', length: 150, unique: true })
   email!: string;
 
-  @Column({ length: 255 })
+  @Column({ type: 'varchar', length: 255 })
   senha!: string;
 
   @Column({ type: 'enum', enum: UserRole, default: UserRole.ATENDENTE })
   role!: UserRole;
 
-  @CreateDateColumn({ name: 'created_at' })
+  @CreateDateColumn({ name: 'created_at', type: 'timestamp' })
   createdAt!: Date;
 }
