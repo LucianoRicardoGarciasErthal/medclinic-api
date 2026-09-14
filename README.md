@@ -289,6 +289,14 @@ Controla as migrations executadas no banco.
 - Validação de permissão por papel (RBAC)
 - Middleware central de tratamento de erros
 
+## 🐛 Troubleshooting
+
+### Erro: `Cannot find module 'ts-node'`
+
+Rode:
+```bash
+npm install -D ts-node
+
 ## 📝 Licença
 
 ISC
